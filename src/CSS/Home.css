@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Edu+SA+Beginner:wght@500&family=Quicksand&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap');
 
 body {
   overflow-x: hidden;
@@ -33,7 +32,7 @@ h1 {
   height: 50vh; */
   position: absolute;
   height: 100%;
-  width: 65%;
+  width: 70%;
   top: 10%;
   left: 0%;
   display: flex;
@@ -48,7 +47,7 @@ h1 {
   margin: auto;
   font-size: 9vmin;
   z-index: 5;
-  font-family: "Edu SA Beginner", cursive;
+  font-family: 'Caveat', cursive;
 }
 
 .home-picture {
@@ -80,7 +79,7 @@ span {
   transform: scale(0.94);
   animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
   font-size: 5vmin;
-  font-family: "Edu SA Beginner", cursive;
+  font-family: 'Caveat', cursive;
 }
 
 .arrow-down-icon {
@@ -89,17 +88,17 @@ span {
 
 span:nth-child(1) {
   animation: fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
-  animation-delay: 4.5s;
+  animation-delay: 4.7s;
 }
 
 span:nth-child(2) {
   animation: fade-in 0.8s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
-  animation-delay: 4.6s;
+  animation-delay: 4.8s;
 }
 
 span:nth-child(3) {
   animation: fade-in 0.8s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
-  animation-delay: 4.7s;
+  animation-delay: 4.9s;
 }
 
 .bounce {
