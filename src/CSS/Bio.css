@@ -1,5 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
 #bio {
     margin: 0;
-    height: 100vh;
+    height: 120vh; /* change this?? */
     width: 100vw;
+  }
+
+  .bio-header {
+    font-size: 5vw;
+    text-align: center;
+    font-family: 'Indie Flower', cursive;
   }

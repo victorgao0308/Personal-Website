@@ -1,5 +1,8 @@
 import React from "react";
 import "../CSS/Home.css";
+import trump from "../Images/trump.png"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
 let textContent;
 const suffixes = [
@@ -21,10 +24,21 @@ const Home = () => {
   return (
     <>
       <div className="section" id="home">
-        <div className="welcome-text-container">
-          <h2 className="welcome-text" id="welcome-text">
-            {textContent}
-          </h2>
+        <div className="home-container">
+          <div className="welcome-text-container">
+            <h2 className="welcome-text" id="welcome-text">
+              {textContent}
+            </h2>
+          </div>
+          <img src = {trump} className="home-picture" alt = "profile-pic"></img>
+        </div>
+
+        <div className="project-link-container">
+          <h3 className="fade-in-text" onClick={scrollProjects}>
+            <span>View </span>
+            <span>Projects </span>
+            <span><FontAwesomeIcon icon={faChevronDown} className="bounce arrow-down-icon"/></span>
+            </h3>
         </div>
       </div>
     </>
@@ -75,7 +89,23 @@ function typeWriterDelete(length) {
 }
 window.addEventListener("load", () => {
   let num = 0;
-  typeWriter("Hello! I am Victor, a " + pool[num], false);
-  pool.splice(num, 1);
-  if (pool.length === 0) pool = [...suffixes];
+
+  setTimeout(() => {
+    typeWriter("Hello! I am Victor, a " + pool[num], false);
+    pool.splice(num, 1);
+    if (pool.length === 0) pool = [...suffixes];
+  }, 500)
+
 });
+
+function scrollProjects() {
+  const mainNav = document.querySelector(".main-nav");
+  let navHeight = mainNav.getClientRects()[0].height;
+  const projectsSection = document.getElementById("projects");
+  let location = projectsSection.offsetTop;
+
+  window.scroll({
+    top: location - navHeight,
+    behavior: "smooth",
+  });
+}

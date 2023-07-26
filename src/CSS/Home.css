@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Edu+SA+Beginner:wght@500&family=Quicksand&display=swap");
+
+
 body {
   overflow-x: hidden;
 }
@@ -17,21 +20,116 @@ h1 {
   );
 }
 
-.welcome-text-container {
-  /* border: 2px solid black; */
-  width: 68.5vw;
-  height: 50vh;
+.home-container {
   position: absolute;
-  top: 50%;
-  left: 20%;
-  transform: translate(-20%, -50%);
+  width: 85vw;
+  height: 60vh;
+  left: 10vw;
+  top: 15vh;
+}
+
+.welcome-text-container {
+  /* width: 55vw;
+  height: 50vh; */
+  position: absolute;
+  height: 100%;
+  width: 65%;
+  top: 10%;
+  left: 0%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .welcome-text {
+  width: 100%;
+  max-width: 100%;
   color: white;
-  margin: 2px;
-  font-size: 10vmin;
+  margin: auto;
+  font-size: 9vmin;
+  z-index: 5;
+  font-family: "Edu SA Beginner", cursive;
+}
+
+.home-picture {
+  width: 50vmin;
+  height: 50vmin;
+  position: absolute;
+  top: 60%;
+  transform: translate(0%, -50%);
+  right: 0%;
+  /* border: 2px solid black; */
+}
+
+.project-link-container {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: 10vh;
+}
+
+.project-link-container h3 {
+  margin: 0;
+  color: white;
+  font-size: 2vw;
+  cursor: pointer;
+}
+
+span {
+  opacity: 0;
+  transform: scale(0.94);
+  animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+  font-size: 5vmin;
+  font-family: "Edu SA Beginner", cursive;
+}
+
+.arrow-down-icon {
+  font-size: 3.5vmin;
+}
+
+span:nth-child(1) {
+  animation: fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  animation-delay: 4.5s;
+}
+
+span:nth-child(2) {
+  animation: fade-in 0.8s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  animation-delay: 4.6s;
+}
+
+span:nth-child(3) {
+  animation: fade-in 0.8s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  animation-delay: 4.7s;
+}
+
+.bounce {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(10px);
+  }
+}
+
+@keyframes scale {
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+    filter: blur(0px);
+  }
 }

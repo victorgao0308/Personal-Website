@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+
+#projects {
+  margin: 0;
+  height: 120vh; /* change this?? */
+  width: 100vw;
+}
+
+.projects-header {
+  font-size: 5vw;
+  text-align: center;
+  font-family: "Indie Flower", cursive;
+}

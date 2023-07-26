@@ -8,7 +8,7 @@ ul {
   position: -webkit-sticky; /* safari */
   position: sticky;
   top: 0;
-  z-index: 5;
+  z-index: 99;
 }
 
 li {
@@ -29,7 +29,8 @@ a {
 }
 
 li a:hover {
-  background-color: rgb(30, 127, 211);
+  color: rgb(18, 92, 157);
+  cursor: pointer;
 }
 
 .nav-bars {
@@ -51,4 +52,8 @@ li a:hover {
   .navbars {
     display: inline;
   }
+}
+
+.hide {
+  display: none;
 }
