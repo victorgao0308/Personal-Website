@@ -32,11 +32,6 @@ const NavBar = () => {
 export default NavBar;
 
 function scrollHome() {
-  const mainNav = document.querySelector(".main-nav");
-  let navHeight = mainNav.getClientRects()[0].height;
-  const homeSection = document.getElementById("home");
-  let location = homeSection.getClientRects()[0].y;
-
   window.scroll({
     top: 0,
     behavior: "smooth",

@@ -31,9 +31,10 @@ h1 {
   /* width: 55vw;
   height: 50vh; */
   position: absolute;
-  height: 100%;
-  width: 70%;
-  top: 10%;
+  height: 60vmin;
+  width: 50vw;
+  top: 50%;
+  transform: translate(0%, -50%);
   left: 0%;
   display: flex;
   align-items: center;
@@ -51,10 +52,10 @@ h1 {
 }
 
 .home-picture {
-  width: 50vmin;
-  height: 50vmin;
+  width: 40vmin;
+  height: 40vmin;
   position: absolute;
-  top: 60%;
+  top: 50%;
   transform: translate(0%, -50%);
   right: 0%;
   /* border: 2px solid black; */
