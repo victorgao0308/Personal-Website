@@ -18,8 +18,8 @@
   width: 40vmin;
   height: 50vmin;
   top: 0vh;
-  margin-top: 10vh;
-  margin-bottom: 10vh;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
   left: 5vw;
   --s: 2vmin; /* control the size */
   padding: var(--s);

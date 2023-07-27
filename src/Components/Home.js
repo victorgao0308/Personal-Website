@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
 let textContent;
+let navShowing;
 const suffixes = [
   "Software Engineer",
   "Student",
@@ -89,6 +90,8 @@ function typeWriterDelete(length) {
 }
 window.addEventListener("load", () => {
   let num = 0;
+  navShowing = window.innerWidth <= 500 ? false : true;
+  navShowing = window.innerWidth <= 500 ? false : true;
 
   setTimeout(() => {
     typeWriter("Hello! I am Victor, a " + pool[num], false);
@@ -98,12 +101,23 @@ window.addEventListener("load", () => {
 
 });
 
+window.addEventListener("resize", ()=> {
+  navShowing = window.innerWidth <= 500 ? false : true;
+  navShowing = window.innerWidth <= 500 ? false : true;
+})
+
 function scrollProjects() {
-  const mainNav = document.querySelector(".main-nav");
-  let navHeight = mainNav.getClientRects()[0].height;
+  let navHeight;
+  if (navShowing) {
+    const mainNav = document.querySelector(".main-nav");
+    navHeight = mainNav.getClientRects()[0].height;
+  } else {
+    const verticalNav = document.querySelector(".vertical-nav");
+    navHeight = verticalNav.getClientRects()[0].height;
+  }
+
   const projectsSection = document.getElementById("projects");
   let location = projectsSection.offsetTop;
-
   window.scroll({
     top: location - navHeight,
     behavior: "smooth",

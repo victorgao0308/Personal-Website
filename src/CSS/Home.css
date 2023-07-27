@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap');
 
-body {
+html, body {
   overflow-x: hidden;
 }
 
@@ -11,6 +11,7 @@ h1 {
 #home {
   margin: 0;
   height: 100vh;
+  max-height: 100vh;
   width: 100vw;
   background: linear-gradient(
     270deg,
@@ -32,7 +33,7 @@ h1 {
   height: 50vh; */
   position: absolute;
   height: 60vmin;
-  width: 50vw;
+  width: 48vw;
   top: 50%;
   transform: translate(0%, -50%);
   left: 0%;
@@ -46,9 +47,11 @@ h1 {
   max-width: 100%;
   color: white;
   margin: auto;
-  font-size: 9vmin;
+  font-size: 6.5vw;
   z-index: 5;
   font-family: 'Caveat', cursive;
+  vertical-align: center;
+
 }
 
 .home-picture {
