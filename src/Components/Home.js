@@ -50,7 +50,7 @@ export default Home;
 function typeWriter(text, flag) {
   const textElement = document.querySelector(".welcome-text");
   let n = 0;
-  if (flag) n = 22;
+  if (flag) n = 25;
   let timer = setInterval(() => {
     n = n + 1;
     textElement.innerHTML = text.slice(0, n) + "|";
@@ -78,11 +78,11 @@ function typeWriterDelete(length) {
   let timer = setInterval(() => {
     n = n + 1;
     let text = textElement.textContent;
-    textElement.innerHTML = text.slice(0, 22 + length - n) + "|";
+    textElement.innerHTML = text.slice(0, 25 + length - n) + "|";
     if (n === length) {
       clearInterval(timer);
       let rand = Math.floor(Math.random() * pool.length);
-      typeWriter("Hello! I am Victor, a " + pool[rand], true);
+      typeWriter("Hello! I am Victor Gao, a " + pool[rand], true);
       pool.splice(rand, 1);
       if (pool.length === 0) pool = [...suffixes];
     }
@@ -94,7 +94,7 @@ window.addEventListener("load", () => {
   navShowing = window.innerWidth <= 500 ? false : true;
 
   setTimeout(() => {
-    typeWriter("Hello! I am Victor, a " + pool[num], false);
+    typeWriter("Hello! I am Victor Gao, a " + pool[num], false);
     pool.splice(num, 1);
     if (pool.length === 0) pool = [...suffixes];
   }, 500)

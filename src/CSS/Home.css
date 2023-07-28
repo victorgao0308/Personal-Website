@@ -34,7 +34,7 @@ h1 {
   height: 50vh; */
   position: absolute;
   height: 60vmin;
-  width: 48vw;
+  width: 50vw;
   top: 50%;
   transform: translate(0%, -50%);
   left: 0%;
@@ -48,7 +48,7 @@ h1 {
   max-width: 100%;
   color: white;
   margin: auto;
-  font-size: 6.5vw;
+  font-size: 6.3vw;
   z-index: 5;
   font-family: 'Caveat', cursive;
   vertical-align: center;

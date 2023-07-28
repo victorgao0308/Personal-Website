@@ -51,6 +51,10 @@ ul {
   height: 0vh;
 }
 
+.collapsing-div li a {
+  opacity: 0;
+}
+
 .bars {
   height: 4vh;
 }
