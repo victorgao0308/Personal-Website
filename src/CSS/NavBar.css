@@ -48,6 +48,8 @@ ul {
 .collapsing-div {
   background: linear-gradient(270deg, rgba(205,240,255,1) 0%, rgba(113,188,255,1) 100%);
   transition: height 500ms ease-in-out;
+  position: relative;
+  top: -1vh;
   height: 0vh;
 }
 
