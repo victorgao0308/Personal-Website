@@ -25,7 +25,7 @@ ul {
 .vertical-nav {
   position: -webkit-sticky; /* safari */
   position: sticky;
-  height: 8.5vh;
+  height: 8vh;
 }
 
 .vertical-nav-active {
