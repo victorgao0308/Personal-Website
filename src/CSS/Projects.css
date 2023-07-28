@@ -4,6 +4,7 @@
   margin: 0;
   height: 120vh; /* change this?? */
   width: 100vw;
+  max-width: 100%;
 }
 
 .projects-header {

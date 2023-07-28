@@ -5,13 +5,17 @@ ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  overflow: hidden;
   background: linear-gradient(270deg, rgba(205,240,255,1) 0%, rgba(113,188,255,1) 100%);
   height: 7.5vh;
-  position: -webkit-sticky; /* safari */
-  position: sticky;
   top: 0;
   z-index: 99;
+}
+
+.main-nav {
+  position: -webkit-sticky; /* safari */
+  position: sticky;
+  width: 100vw;
+  max-width: 100%;
 }
 
 .main-nav li {
@@ -19,11 +23,13 @@ ul {
 }
 
 .vertical-nav {
+  position: -webkit-sticky; /* safari */
   position: sticky;
   height: 8vh;
 }
 
 .vertical-nav-active {
+  position: -webkit-sticky; /* safari */
   position: sticky;
   display: block;
 }
@@ -33,28 +39,20 @@ ul {
   position: relative;
   z-index: 100;
   width: 100vw;
+  max-width: 100%;
   padding-top: 2vh;
   padding-bottom: 2vh;
   font-size: 2vh;
-  height: 2vh;
 }
 
-.vertical-nav li:nth-child(1) {
-  animation: slide-in-right-nav 0.8s ease-in-out both;  
-}
-.vertical-nav li:nth-child(2) {
-  animation: slide-in-right-nav 0.8s ease-in-out both;
-  animation-delay: 0.1s;
-}
-.vertical-nav li:nth-child(3) {
-  animation: slide-in-right-nav 0.8s ease-in-out both;
-  animation-delay: 0.2s;
-}
-.vertical-nav li:nth-child(4) {
-  animation: slide-in-right-nav 0.8s ease-in-out both;
-  animation-delay: 0.3s; 
+.collapsing-div {
+  background: linear-gradient(270deg, rgba(205,240,255,1) 0%, rgba(113,188,255,1) 100%);
+  transition: height 500ms ease-in-out;
 }
 
+.bars {
+  height: 4vh;
+}
 
 .main-nav li a {
   display: block;
@@ -70,13 +68,18 @@ ul {
   font-size: 2.5vh;
 }
 
+.vertical-nav li:hover a {
+  color: rgb(18, 92, 157);
+  cursor: pointer;
+}
+
 
 .main-nav a:hover {
   color: rgb(18, 92, 157);
   cursor: pointer;
 }
 
-.vertical-nav li:hover{
+.collapsing-div li:hover{
   color: rgb(18, 92, 157);
   cursor: pointer;
 }
@@ -84,8 +87,14 @@ ul {
 .nav-bars {
   position: absolute;
   height: 5vw;
-  float: right;
   left: 1vw;
+  cursor: pointer;
+  top: 50%;
+  transform: translate(0%, -50%);
+}
+
+.nav-bars:hover{
+  color: rgb(18, 92, 157);
   cursor: pointer;
 }
 
@@ -99,19 +108,6 @@ ul {
   }
 }
 
-
-@keyframes slide-in-right-nav {
-  0% {
-    -webkit-transform: translateX(100px);
-    transform: translateX(100px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-    opacity: 1;
-  }
-} 
 
 .hide {
   display: none;

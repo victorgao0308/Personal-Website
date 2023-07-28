@@ -24,23 +24,23 @@ const NavBar = () => {
       </ul>
 
       <ul className="vertical-nav">
-        <li>
-            <FontAwesomeIcon
-              icon={faBars}
-              className="nav-bars"
-              onClick={collapseDiv}
-            />
+        <li className="bars">
+          <FontAwesomeIcon
+            icon={faBars}
+            className="nav-bars"
+            onClick={collapseDiv}
+          />
         </li>
 
-        <div className="collapsing-div hide">
-          <li>
-            <a onClick={scrollHome}>Home</a>
+        <div className="collapsing-div">
+          <li onClick={scrollHome}>
+            <a>Home</a>
           </li>
-          <li>
-            <a onClick={scrollBio}>Bio</a>
+          <li onClick={scrollBio}>
+            <a>Bio</a>
           </li>
-          <li>
-            <a onClick={scrollProjects}>Projects</a>
+          <li onClick={scrollProjects}>
+            <a>Projects</a>
           </li>
           <li>
             <a>Contact</a>
@@ -66,10 +66,9 @@ function scrollBio() {
   let navHeight;
 
   if (navShowing) {
-  const mainNav = document.querySelector(".main-nav");
-  navHeight = mainNav.getClientRects()[0].height;
-  }
-  else {
+    const mainNav = document.querySelector(".main-nav");
+    navHeight = mainNav.getClientRects()[0].height;
+  } else {
     collapseDiv();
     const verticalNav = document.querySelector(".vertical-nav");
     navHeight = verticalNav.getClientRects()[0].height;
@@ -123,9 +122,16 @@ function toggleNavMenu() {
 
 function collapseDiv() {
   const collapseDiv = document.querySelector(".collapsing-div");
-  collapseDiv.classList.toggle("hide");
 
-  const verticalNav = document.querySelector(".vertical-nav");
-  if (collapseDiv.classList.contains("hide")) verticalNav.style.height = `8vh`;
-  else verticalNav.style.height = `35vh`;
+  console.log(collapseDiv.style.height);
+  if (collapseDiv.style.height !== `0vh`) collapseDiv.style.height = `0vh`;
+  else collapseDiv.style.height = `30vh`;
+
+  const links = document.querySelectorAll(".collapsing-div a");
+
+  links.forEach((link, index) => {
+    link.classList.toggle("hide");
+  });
 }
+
+function displayLinks() {}
