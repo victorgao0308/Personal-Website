@@ -25,7 +25,7 @@ ul {
 .vertical-nav {
   position: -webkit-sticky; /* safari */
   position: sticky;
-  height: 8vh;
+  height: 8.5vh;
 }
 
 .vertical-nav-active {
@@ -48,6 +48,7 @@ ul {
 .collapsing-div {
   background: linear-gradient(270deg, rgba(205,240,255,1) 0%, rgba(113,188,255,1) 100%);
   transition: height 500ms ease-in-out;
+  height: 0vh;
 }
 
 .bars {
@@ -107,6 +108,20 @@ ul {
     display: inline;
   }
 }
+
+.collapsing-div li .active {
+  opacity: 0;
+  animation: fade-in 1s ease-in-out both;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+} 
 
 
 .hide {

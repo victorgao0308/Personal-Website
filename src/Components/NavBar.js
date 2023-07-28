@@ -122,16 +122,20 @@ function toggleNavMenu() {
 
 function collapseDiv() {
   const collapseDiv = document.querySelector(".collapsing-div");
-
-  console.log(collapseDiv.style.height);
-  if (collapseDiv.style.height !== `0vh`) collapseDiv.style.height = `0vh`;
-  else collapseDiv.style.height = `30vh`;
-
   const links = document.querySelectorAll(".collapsing-div a");
 
+
+  if (collapseDiv.style.height !== `30vh`) collapseDiv.style.height = `30vh`;
+  else {
+    collapseDiv.style.height = `0vh`;
+    links.forEach((link, index) => {
+      link.style.opacity = 0;
+    });
+  }
+
+
   links.forEach((link, index) => {
-    link.classList.toggle("hide");
+    link.classList.toggle("active");
   });
 }
 
-function displayLinks() {}

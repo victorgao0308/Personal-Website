@@ -9,7 +9,15 @@ const Bio = () => {
     <>
       <div className="section" id="bio">
         <h1 className="bio-header scroll slide-right">Bio</h1>
-        <img src={trump} className="bio-picture scroll slide-right" alt="bio-pic"></img>
+
+        <div className="bio-container">
+          <img
+            src={trump}
+            className="bio-picture scroll slide-right"
+            alt="bio-pic"
+          ></img>
+          <div className="bio-desc-container scroll slide-right"></div>
+        </div>
       </div>
     </>
   );
@@ -23,21 +31,16 @@ window.addEventListener("load", () => {
 });
 
 const elementInView = (el) => {
-const bioSection = document.getElementById("bio");
-const bioSectionHeight = bioSection.getBoundingClientRect().height;
-  const elementTop = el.getBoundingClientRect().top + bioSectionHeight/2;
-  return (
-    elementTop <= (window.innerHeight)
-  );
+  const bioSection = document.getElementById("bio");
+  const bioSectionHeight = bioSection.getBoundingClientRect().height;
+  const elementTop = el.getBoundingClientRect().top + bioSectionHeight / 2;
+  return elementTop <= window.innerHeight;
 };
 
 const elementOutofView = (el) => {
   const elementTop = el.getBoundingClientRect().top;
-  return (
-    elementTop > (window.innerHeight)
-  );
+  return elementTop > window.innerHeight;
 };
-
 
 const handleScrollAnimation = () => {
   if (scrollElements == null) return;
@@ -46,7 +49,7 @@ const handleScrollAnimation = () => {
       el.classList.add("scrolled");
     }
     if (elementOutofView(el)) {
-        el.classList.remove("scrolled");
+      el.classList.remove("scrolled");
     }
   });
 };
