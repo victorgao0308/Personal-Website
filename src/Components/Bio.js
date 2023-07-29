@@ -16,7 +16,28 @@ const Bio = () => {
             className="bio-picture scroll slide-right"
             alt="bio-pic"
           ></img>
-          <div className="bio-desc-container scroll slide-right"></div>
+          <div className="bio-desc-container scroll slide-right">
+            <p className="bio-desc">
+              Hello! I am Victor Gao, from Lexington, KY. I am currently a
+              student at Purdue University, dual majoring in computer science
+              and data science.
+              <br></br>
+              <br></br>I have previously worked alongside professors at the
+              University of Kentucky to hone my skills in C and python, gaining
+              experience with the Ubuntu operating system, and various image
+              processing and OCR python libraries, such as OpenCV and
+              Pytesseract.
+              <br></br>
+              <br></br>I have also worked alongside the Mara Elephant Project at
+              Purdue University to create HTML templates of reports of forest
+              loss and cover remaining through the years in the Greater Mara
+              Ecosystem. Additionally, I helped to improve the web interface and
+              functionality of Ecoscope, where users can generate these reports,
+              using Django.
+              <br></br>
+              <br></br>Finally, I have also gone and devloped my skills in Javascript and React through some of my projects (including this website), which you can view in the next section.
+            </p>
+          </div>
         </div>
       </div>
     </>

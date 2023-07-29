@@ -1,0 +1,35 @@
+.top-btn-container {
+  position: fixed;
+  right: 0;
+  bottom: 10vh;
+  height: 4vmax;
+  width: 4vmax;
+  /* border: 2px solid black; */
+  background-color: rgba(113, 188, 255, 1);
+
+  z-index: 2;
+  animation: slide-right 1s ease-in-out both;
+
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.top-btn {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4vmax;
+  color: white;
+}
+
+@keyframes slide-right {
+  0% {
+    -webkit-transform: translateX(10vw);
+    transform: translateX(10vw);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
