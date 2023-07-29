@@ -16,7 +16,7 @@ export default TopBtn;
 window.addEventListener('scroll', ()=> {
     const topBtn = document.querySelector(".top-btn-container");
 
-    if(window.scrollY >= 500) {
+    if(window.scrollY >= 200) {
         topBtn.classList.remove("hide");
     }
     else {

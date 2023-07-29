@@ -9,17 +9,17 @@ const NavBar = () => {
   return (
     <>
       <ul className="main-nav">
-        <li>
-          <a onClick={scrollHome}>Home</a>
+        <li onClick={scrollHome}>
+          <a>Home</a>
         </li>
-        <li>
-          <a onClick={scrollBio}>Bio</a>
+        <li onClick={scrollBio}>
+          <a>Bio</a>
         </li>
-        <li>
-          <a onClick={scrollProjects}>Projects</a>
+        <li onClick={scrollProjects}>
+          <a>Projects</a>
         </li>
-        <li>
-          <a>Contact</a>
+        <li onClick={scrollSocials}>
+          <a>Socials</a>
         </li>
       </ul>
 
@@ -95,6 +95,25 @@ function scrollProjects() {
 
   const projectsSection = document.getElementById("projects");
   let location = projectsSection.offsetTop;
+  window.scroll({
+    top: location - navHeight,
+    behavior: "smooth",
+  });
+}
+
+function scrollSocials() {
+  let navHeight;
+  if (navShowing) {
+    const mainNav = document.querySelector(".main-nav");
+    navHeight = mainNav.getClientRects()[0].height;
+  } else {
+    collapseDiv();
+    const verticalNav = document.querySelector(".vertical-nav");
+    navHeight = verticalNav.getClientRects()[0].height;
+  }
+
+  const socialsSection = document.getElementById("socials");
+  let location = socialsSection.offsetTop;
   window.scroll({
     top: location - navHeight,
     behavior: "smooth",

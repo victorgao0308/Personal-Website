@@ -2,7 +2,7 @@
 
 #projects {
   margin: 0;
-  height: 120vh; /* change this?? */
+  height: 90vw;
   width: 100vw;
   max-width: 100%;
 }
@@ -11,4 +11,40 @@
   font-size: 5vw;
   text-align: center;
   font-family: "Indie Flower", cursive;
+}
+
+.projects-subheader {
+  margin: 0;
+  font-size: 2vw;
+  text-align: center;
+  font-family: "Indie Flower", cursive;
+}
+
+.projects-container {
+  position: relative;
+  width: 90vw;
+  left: 5vw;
+  height: 80vw;
+  top: 0vh;
+  /* border: 2px solid black; */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5vw;
+}
+
+.project {
+  position: relative;
+  width: 28.4vw;
+  height: 35vw;
+  border: 0.3vw solid black;
+  border-radius: 5px;
+  transition: transform 0.5s ease-in-out;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+}
+
+.project:hover {
+  transform: translateY(-1vh);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
 }
