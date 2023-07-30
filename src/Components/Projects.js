@@ -110,6 +110,27 @@ const Projects = () => {
           className="close-info-menu"
           onClick={closeInfoMenu}
         />
+        <div className="content-container">
+            <h3 className="content-header">Flash Cards App</h3>
+            <p className="content-desc">A flash card app where users can create, review, and study flash cards. Users are able to create sets of flashcards, and study or review individual sets.
+            <br></br>
+            <br></br>
+            Users can choose to create an account, storing their sets and cards within the PostgreSQL database. Users can also choose to continue as a guest, where their data will get stored in the local storage of the browser they are using.
+            <br></br>
+            <br></br>
+            Features include:
+            <br></br>
+            <br></br>
+            &#x2022; An adaptive study algorithm where the study mode gets more difficult the higher the user's accuracy is, to increase learning and retention of information
+            <br></br>
+            <br></br>
+            &#x2022; If the user is logged in, sets/cards get cached to the local storage of the browser to reduce load speeds by up to 50%, and to minimize the amount of calls to the database
+            <br></br>
+            <br></br>
+            &#x2022; Simple, responsive, and intuitive UI, to limit distractions and maximize learning and retention
+            </p>
+            <a target = "_blank" href = "https://github.com/victorgao0308/Flash-Cards-App-Full-Stack" className="repo-link">GitHub Repo</a>
+        </div>
       </div>
     </>
   );
@@ -129,7 +150,6 @@ function closeInfoMenu() {
 
 function displayProjectInfoFlashCards() {
   openInfoMenu();
-  const infoContainer = document.querySelector(".project-info-container");
-
+  const contentContainer = document.querySelector(".content-container");
 
 }
