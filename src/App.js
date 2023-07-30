@@ -24,6 +24,7 @@ function App() {
             </>
           }
         ></Route>
+        {/* tetris path here?? */}
       </Routes>
     </Router>
   );

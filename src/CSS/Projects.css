@@ -131,3 +131,37 @@
     animation-delay: 1.67s;
   }
 }
+
+.project-info-container {
+  position: fixed;
+  width: 98%;
+  left: 1%;
+  top: 2.5%;
+  height: 95%;
+  border: 2px solid black;
+  z-index: 100;
+  background: linear-gradient(270deg, rgba(227,247,255,1) 0%, rgba(166,213,255,1) 100%);
+  border-radius: 1vw;
+  animation: fade-in 0.5s ease-in-out both;
+}
+
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.close-info-menu {
+  position: absolute;
+  right: 0.2vw;
+  top: 0.2vw;
+  font-size: 3vw;
+}
+
+.close-info-menu:hover {
+  cursor: pointer;
+}
