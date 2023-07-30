@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
 
 #socials {
+  position: relative;
   margin: 0;
   height: 100vh;
   width: 100vw;
