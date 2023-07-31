@@ -1,9 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap");
 
 #bio {
   margin: 0;
-  /* height: 120vh; change this?? */
   position: relative;
   width: 100vw;
   max-width: 100%;
@@ -26,33 +25,75 @@
 
 .bio-picture {
   position: absolute;
-  width: 25vw;
-  height: 25vw;
+  width: 30vw;
+  height: 30vw;
   left: 2.5vw;
-  --s: 2vw; 
-  border: calc(2*var(--s)) solid #0000;
+  --s: 2vw;
+  border: calc(2 * var(--s)) solid #0000;
   outline: 0.35vw solid #000;
-  outline-offset: calc(-1*var(--s));
-  background: conic-gradient(from 90deg at 0.2vw 0.2vw,#0000 25%,#000 0);
+  outline-offset: calc(-1 * var(--s));
+  background: conic-gradient(from 90deg at 0.2vw 0.2vw, #0000 25%, #000 0);
 }
 
 .bio-desc-container {
   position: absolute;
-  height: 25vw;
-  width: 25vw;
+  height: 30vw;
+  width: 30vw;
   border: 2px solid black;
   --s: 2vw;
   right: 2.5vw;
-  border: calc(2*var(--s)) solid #0000;
+  border: calc(2 * var(--s)) solid #0000;
   outline: 0.35vw solid #000;
-  outline-offset: calc(-1*var(--s));
+  outline-offset: calc(-1 * var(--s));
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   overflow: auto;
 }
 
 .bio-desc {
-  font-family: 'Didact Gothic', sans-serif;
+  font-family: "Didact Gothic", sans-serif;
   font-size: 1.5vw;
+}
+
+@media screen and (max-width: 750px) {
+  .bio-container {
+    width: 85vw;
+    height: 135vw;
+    left: 7.5vw;
+    top: 0vh;
+  }
+
+  .bio-picture {
+    position: relative;
+    width: 50vw;
+    height: 50vw;
+    left: 11.5vw;
+    --s: 3vw;
+    border: calc(2 * var(--s)) solid #0000;
+    outline: 0.35vw solid #000;
+    outline-offset: calc(-1 * var(--s));
+    background: conic-gradient(from 90deg at 0.2vw 0.2vw, #0000 25%, #000 0);
+  }
+
+  .bio-desc-container {
+    position: relative;
+    height: 50vw;
+    width: 50vw;
+    left: 11.5vw;
+    overflow: auto;
+    top: 2vw;
+    --s: 3vw;
+    right: 2.5vw;
+    border: calc(2 * var(--s)) solid #0000;
+    outline: 0.35vw solid #000;
+    outline-offset: calc(-1 * var(--s));
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    overflow: auto;
+  }
+
+  .bio-desc {
+    font-family: "Didact Gothic", sans-serif;
+    font-size: 3vw;
+  }
 }
 
 .scroll {
@@ -69,10 +110,9 @@
 }
 
 .scrolled.slide-right:nth-child(2) {
-  animation: slide-in-right 1s ease-in-out both;  
+  animation: slide-in-right 1s ease-in-out both;
   animation-delay: 0.75s;
 }
-
 
 @keyframes slide-in-right {
   0% {
@@ -85,6 +125,4 @@
     transform: translateX(0);
     opacity: 1;
   }
-} 
-
-
+}

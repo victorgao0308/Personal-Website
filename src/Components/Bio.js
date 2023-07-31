@@ -53,8 +53,7 @@ window.addEventListener("load", () => {
 
 const elementInView = (el) => {
   const bioSection = document.getElementById("bio");
-  const bioSectionHeight = bioSection.getBoundingClientRect().height;
-  const elementTop = el.getBoundingClientRect().top + bioSectionHeight / 2;
+  const elementTop = el.getBoundingClientRect().top;
   return elementTop <= window.innerHeight;
 };
 
