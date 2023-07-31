@@ -51,7 +51,7 @@ const Projects = () => {
           </div>
           <div
             className="project scroll slide-right-projects"
-            onClick={displayProjectInfoFlashCards}
+            onClick={displayProjectInfoFoodForThought}
           >
             <div className="project-inner">
               <h3>Food For Thought</h3>
@@ -185,5 +185,32 @@ function displayProjectInfoTetris() {
   const repoLink = document.querySelector(".repo-link");
   repoLink.href = `https://github.com/victorgao0308/tetris`;
   const contentDesc = document.querySelector(".content-desc");
-  contentDesc.innerHTML = ` tetris`;
+  contentDesc.innerHTML = `The classic game of Tetris created with vanilla JavaScript. The game board is composed of 200 individual squares, in a 10 x 20 layout. There is also an additional few rows of blocks above the game board to serve as the spawn location of the blocks. If the blocks reach this spawn area, the game will be over.
+  <br></br>
+  The game is mainly run on an animation loop, where each frame, the program checks for collisions and/or line clears, and then moving blocks down/clearing lines of blocks.
+  <br></br>
+  Controls:
+  <br></br>
+  &#x2022; Left/Right arrow to move the block left/right
+  <br></br>
+  &#x2022; Up arrow to rotate the block
+  <br></br>
+  &#x2022; Hold down arrow to cause the block to fall faster
+  <br></br>
+  Note: The rotation scheme of the blocks follows the super rotation system, and when rotating blocks near walls or other blocks, the program will attempt to "kick" the block to allow it to rotate.
+  <br></br>
+  Clearing lines awards points, and upon reaching point thresholds, the level will increase, causing the blockas to fall faster.
+  <br></br>
+  There is also a hard mode that increases the difficulty of the game, but provides more points per line clear.`;
+}
+
+
+function displayProjectInfoFoodForThought() {
+  openInfoMenu();
+  const contentHeader = document.querySelector(".content-header");
+  contentHeader.innerHTML = `Food For Thought`;
+  const repoLink = document.querySelector(".repo-link");
+  repoLink.href = `https://github.com/victorgao0308/tetris`;
+  const contentDesc = document.querySelector(".content-desc");
+  contentDesc.innerHTML = `A wep app desgined during a hackathon with the vision to connect restaurants with leftover food or `;
 }
