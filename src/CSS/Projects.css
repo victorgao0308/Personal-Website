@@ -239,10 +239,12 @@
   right: 0.2vw;
   top: 0.2vw;
   font-size: 3vmax;
+  transition: transform 0.5s ease-in-out;
 }
 
 .close-info-menu:hover {
   cursor: pointer;
+  transform: rotate(90deg);
 }
 
 .content-container {

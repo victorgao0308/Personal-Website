@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import flashCardsIcon from "../Images/flashcards-icon.jpg";
 import tetrisIcon from "../Images/tetris-icon.jpg"
+import foodForThoughtIcon from "../Images/food-for-thought-icon.jpg"
 
 
 let projectContent;
@@ -55,7 +56,7 @@ const Projects = () => {
           >
             <div className="project-inner">
               <h3>Food For Thought</h3>
-              <img className="project-img-container"></img>
+              <img src = {foodForThoughtIcon} className="project-img-container"></img>
               <p className="project-desc">
                 A web app designed during a hackathon to connect restaurants and
                 people with leftover food to charities and those in need.
@@ -66,7 +67,7 @@ const Projects = () => {
           </div>
           <div
             className="project scroll slide-right-projects"
-            onClick={displayProjectInfoFlashCards}
+            onClick={displayProjectInfoMoodMusic}
           >
             <div className="project-inner">
               <h3>Mood Music</h3>
@@ -81,7 +82,7 @@ const Projects = () => {
           </div>
           <div
             className="project scroll slide-right-projects"
-            onClick={displayProjectInfoFlashCards}
+            onClick={displayProjectInfoCloud}
           >
             <div className="project-inner">
               <h3>Multi-Cloud Storage Systems</h3>
@@ -95,7 +96,7 @@ const Projects = () => {
           </div>
           <div
             className="project scroll slide-right-projects"
-            onClick={displayProjectInfoFlashCards}
+            onClick={displayProjectInfoChatApp}
           >
             <div className="project-inner">
               <h3>Tutor Service Chat App</h3>
@@ -210,7 +211,58 @@ function displayProjectInfoFoodForThought() {
   const contentHeader = document.querySelector(".content-header");
   contentHeader.innerHTML = `Food For Thought`;
   const repoLink = document.querySelector(".repo-link");
-  repoLink.href = `https://github.com/victorgao0308/tetris`;
+  repoLink.href = `https://github.com/Pixelgost/FoodforThought`;
   const contentDesc = document.querySelector(".content-desc");
-  contentDesc.innerHTML = `A wep app desgined during a hackathon with the vision to connect restaurants with leftover food or `;
+  contentDesc.innerHTML = `A wep app desgined during a hackathon with the vision to connect restaurants or individuals with leftover food to charities or those in need of food. Users are able to sign in via Google, and choose whether they would like to give food, or receive food.
+  <br></br>
+  With Google Maps API integration, users who choose to give food can drop a marker down on the interactive map, where users who choose to recieve food can see the location of the marker, the name of the giver, and the food that is available.
+  <br></br>
+  All information is stored in AWS' Dyanamo DB, where info can be stored and retrieved quickly.
+  <br></br>
+  The front end was made using React, providing a smooth interface and UI epxerience to users.`;
+}
+
+function displayProjectInfoMoodMusic() {
+  openInfoMenu();
+  const contentHeader = document.querySelector(".content-header");
+  contentHeader.innerHTML = `Mood Music`;
+  const repoLink = document.querySelector(".repo-link");
+  repoLink.href = `https://github.com/victorgao0308/MoodMusic`;
+  const contentDesc = document.querySelector(".content-desc");
+  contentDesc.innerHTML = `An app designed during a hackathon that suggests music to users based on their current mood and their listening history.
+  <br></br>
+  Users can log in with their Spotify account, and the app will pull their top artists/genres/tracks from their listening history. Users' current mood is collected via DeepFace AI, which predicts the user's current emotion.
+  <br></br>
+  Based on the user's current emotion, the app will try to match relevant songs that both fit the user's favorite artsits and genres and the user's current mood. To determine what "mood" a song is, various factors, such as the song's BPM and key, are assessed.
+  <br></br>
+  The program will generate a list of up to 5 random songs for the user that fit both criteria as closely as possible.`;
+}
+
+function displayProjectInfoCloud() {
+  openInfoMenu();
+  const contentHeader = document.querySelector(".content-header");
+  contentHeader.innerHTML = `Multi-Cloud Storage Systems`;
+  const repoLink = document.querySelector(".repo-link");
+  repoLink.href = `https://github.com/victorgao0308/CloudStorageSystems`;
+  const contentDesc = document.querySelector(".content-desc");
+  contentDesc.innerHTML = `An app that simulates file transfers between local storages and cloud-based storages. Part of a research project done at the University of Kentucky.
+  <br></br>
+  Users can choose to create, copy, retrieve, or delete a file. Users are able to perform these actions in the local storage, in the cloud storage, or between the two.
+  <br></br>
+  This project was created using C, in the Ubunutu operating system.`;
+}
+
+function displayProjectInfoChatApp() {
+  openInfoMenu();
+  const contentHeader = document.querySelector(".content-header");
+  contentHeader.innerHTML = `Tutor Service Chat App`;
+  const repoLink = document.querySelector(".repo-link");
+  repoLink.innerHTML = "";
+  repoLink.href = "";
+  const contentDesc = document.querySelector(".content-desc");
+  contentDesc.innerHTML = `An app where users can provide or seek tutoring services. Users can create accounts as either role, and can communicate to each other via a messaging system. Within this messaging system, users can choose to block other users, or to become invisible, where no other users will be able to see that they are on the platform.
+  <br></br>
+  Users may also choose to upload a .txt file to send, and the contents of that file will be read and then sent to the intended receiver. Users can also export their conversations, where they will recieve a time-stamped message log with between them and the user(s) that they choose. Users can also freely edit and delete any messages that they have sent.
+  <br></br>
+  The app also supports conccurency via a server, where multiple users can connect at the same time, and conversation logs get updated in real time. There is also a basic UI, built with the Java Swing. The entire app was coded in Java, and acted as part of a final group project for CS18000. Due to course policies, I am unable to provide the GitHub repo to this project.`;
 }
