@@ -3,7 +3,6 @@
 #socials {
   position: relative;
   margin: 0;
-  height: 50vh;
   width: 100vw;
   max-width: 100%;
 }
@@ -14,3 +13,74 @@
   font-family: "Indie Flower", cursive;
 }
 
+.socials-subheader {
+  font-size: 2.5vw;
+  text-align: center;
+  font-family: "Indie Flower", cursive;
+  margin: 0;
+}
+
+.socials-container {
+  position: relative;
+  width: 50vw;
+  left: 25vw;
+  top: 3vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contact-info-container {
+  height: 5vh;
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 3vh;
+}
+
+.contact-icon {
+  font-size: 5vmin;
+}
+
+.contact-info {
+  margin: 0;
+  width: 50vw;
+  position: relative;
+  left: 2vw;
+  font-size: 2vw;
+  top: 50%;
+  transform: translate(0%, -50%);
+}
+
+.link {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 750px) {
+  .socials-header {
+    font-size: 7.5vw;
+  }
+
+  .socials-subheader {
+    font-size: 4vw;
+  }
+
+  .socials-container {
+    position: relative;
+    width: 75vw;
+    left: 12.5vw;
+    top: 3vh;
+  }
+  
+  .contact-info-container {
+    height: 3vh;
+  }
+  
+  .contact-info {
+    margin: 0;
+    width: 50vw;
+    position: relative;
+    left: 2vw;
+    font-size: 3vw;
+    top: 50%;
+    transform: translate(0%, -50%);
+  }
+}

@@ -94,6 +94,10 @@
     font-family: "Didact Gothic", sans-serif;
     font-size: 3vw;
   }
+
+  .bio-header {
+    font-size: 7.5vw;
+  }
 }
 
 .scroll {

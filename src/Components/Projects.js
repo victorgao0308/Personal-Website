@@ -5,6 +5,7 @@ import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import flashCardsIcon from "../Images/flashcards-icon.jpg";
 import tetrisIcon from "../Images/tetris-icon.jpg"
 import foodForThoughtIcon from "../Images/food-for-thought-icon.jpg"
+import moodMusicIcon from "../Images/mood-music-icon.jpg"
 
 
 let projectContent;
@@ -25,7 +26,7 @@ const Projects = () => {
           >
             <div className="project-inner">
               <h3>Flash Card App</h3>
-              <img src = {flashCardsIcon} className="project-img-container">
+              <img src = {flashCardsIcon} className="project-img-container" alt = "flash card app picture">
                 
               </img>
               <p className="project-desc">
@@ -42,7 +43,7 @@ const Projects = () => {
           >
             <div className="project-inner">
               <h3>Tetris</h3>
-              <img src = {tetrisIcon} className="project-img-container"></img>
+              <img src = {tetrisIcon} className="project-img-container" alt="teris picture"></img>
               <p className="project-desc">
                 The classic game of Tetris built in vanilla JavaScript. Web demo
                 version slightly modified to be utilized with React. For the
@@ -56,7 +57,7 @@ const Projects = () => {
           >
             <div className="project-inner">
               <h3>Food For Thought</h3>
-              <img src = {foodForThoughtIcon} className="project-img-container"></img>
+              <img src = {foodForThoughtIcon} className="project-img-container" alt="food for thought picture"></img>
               <p className="project-desc">
                 A web app designed during a hackathon to connect restaurants and
                 people with leftover food to charities and those in need.
@@ -71,7 +72,7 @@ const Projects = () => {
           >
             <div className="project-inner">
               <h3>Mood Music</h3>
-              <img className="project-img-container"></img>
+              <img src = {moodMusicIcon} className="project-img-container" alt="mood music picture"></img>
               <p className="project-desc">
                 An app desgined during a hackathon to suggest music to users
                 based on their listening history and current mood. Spotify API
@@ -153,6 +154,7 @@ function displayProjectInfoFlashCards() {
   const contentHeader = document.querySelector(".content-header");
   contentHeader.innerHTML = `Flash Cards App`;
   const repoLink = document.querySelector(".repo-link");
+  repoLink.innerHTML = "GitHub Repo";
   repoLink.href = `https://github.com/victorgao0308/Flash-Cards-App-Full-Stack`;
   const contentDesc = document.querySelector(".content-desc");
   contentDesc.innerHTML = `A flash card app where users can create, review, and study flash
@@ -184,6 +186,7 @@ function displayProjectInfoTetris() {
   const contentHeader = document.querySelector(".content-header");
   contentHeader.innerHTML = `Tetris`;
   const repoLink = document.querySelector(".repo-link");
+  repoLink.innerHTML = "GitHub Repo";
   repoLink.href = `https://github.com/victorgao0308/tetris`;
   const contentDesc = document.querySelector(".content-desc");
   contentDesc.innerHTML = `The classic game of Tetris created with vanilla JavaScript. The game board is composed of 200 individual squares, in a 10 x 20 layout. There is also an additional few rows of blocks above the game board to serve as the spawn location of the blocks. If the blocks reach this spawn area, the game will be over.
@@ -205,12 +208,12 @@ function displayProjectInfoTetris() {
   There is also a hard mode that increases the difficulty of the game, but provides more points per line clear.`;
 }
 
-
 function displayProjectInfoFoodForThought() {
   openInfoMenu();
   const contentHeader = document.querySelector(".content-header");
   contentHeader.innerHTML = `Food For Thought`;
   const repoLink = document.querySelector(".repo-link");
+  repoLink.innerHTML = "GitHub Repo";
   repoLink.href = `https://github.com/Pixelgost/FoodforThought`;
   const contentDesc = document.querySelector(".content-desc");
   contentDesc.innerHTML = `A wep app desgined during a hackathon with the vision to connect restaurants or individuals with leftover food to charities or those in need of food. Users are able to sign in via Google, and choose whether they would like to give food, or receive food.
@@ -227,6 +230,7 @@ function displayProjectInfoMoodMusic() {
   const contentHeader = document.querySelector(".content-header");
   contentHeader.innerHTML = `Mood Music`;
   const repoLink = document.querySelector(".repo-link");
+  repoLink.innerHTML = "GitHub Repo";
   repoLink.href = `https://github.com/victorgao0308/MoodMusic`;
   const contentDesc = document.querySelector(".content-desc");
   contentDesc.innerHTML = `An app designed during a hackathon that suggests music to users based on their current mood and their listening history.
@@ -243,6 +247,7 @@ function displayProjectInfoCloud() {
   const contentHeader = document.querySelector(".content-header");
   contentHeader.innerHTML = `Multi-Cloud Storage Systems`;
   const repoLink = document.querySelector(".repo-link");
+  repoLink.innerHTML = "GitHub Repo";
   repoLink.href = `https://github.com/victorgao0308/CloudStorageSystems`;
   const contentDesc = document.querySelector(".content-desc");
   contentDesc.innerHTML = `An app that simulates file transfers between local storages and cloud-based storages. Part of a research project done at the University of Kentucky.

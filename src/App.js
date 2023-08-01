@@ -5,6 +5,7 @@ import Bio from "./Components/Bio";
 import Projects from "./Components/Projects";
 import TopBtn from "./Components/TopBtn";
 import Contact from "./Components/Socials";
+import Footer from "./Components/Footer";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
               <Bio />
               <Projects />
               <Contact />
+              <Footer />
             </>
           }
         ></Route>

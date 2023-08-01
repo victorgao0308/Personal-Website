@@ -1,0 +1,19 @@
+.footer {
+  height: 10vh;
+  width: 100vw;
+  max-width: 100%;
+  background: linear-gradient(
+    270deg,
+    rgba(205, 240, 255, 1) 0%,
+    rgba(113, 188, 255, 1) 100%
+  );
+}
+
+.footer-text {
+  font-size: 85%;
+  text-align: center;
+  color: white;
+  position: relative;
+  top: 50%;
+  transform: translate(0%, -50%);
+}
