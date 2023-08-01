@@ -12,21 +12,18 @@ const Contact = () => {
         <h1 className="socials-header">Socials</h1>
         <h3 className="socials-subheader">Feel free to contact me!</h3>
         <div className="socials-container">
-          <div className="contact-info-container link" onClick={openEmail}>
-            <FontAwesomeIcon icon={faEnvelope} className="contact-icon" />
-            <p className="contact-info">victorgao0308@gmail.com</p>
+          <div className="social-imgs-container">
+            <FontAwesomeIcon icon={faEnvelope} className="contact-icon link" onClick={openEmail} />
+            <FontAwesomeIcon icon={faLinkedinIn} className="contact-icon link" onClick={openLinkedIn} />
+            <FontAwesomeIcon icon={faGithub} className="contact-icon link" onClick={openGitHub} />
           </div>
 
-          <div className="contact-info-container link" onClick={openLinkedIn}>
-            <FontAwesomeIcon icon={faLinkedinIn} className="contact-icon" />
-            <p className="contact-info">
+          <div className="social-text-container">
+            <p className="contact-info link" onClick={openEmail}>victorgao0308@gmail.com</p>
+            <p className="contact-info link" onClick={openLinkedIn}>
               https://www.linkedin.com/in/victorgao0308/
             </p>
-          </div>
-
-          <div className="contact-info-container link" onClick={openGitHub}>
-            <FontAwesomeIcon icon={faGithub} className="contact-icon" />
-            <p className="contact-info">https://github.com/victorgao0308</p>
+            <p className="contact-info link" onClick={openGitHub}>https://github.com/victorgao0308</p>
           </div>
         </div>
       </div>

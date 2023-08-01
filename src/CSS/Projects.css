@@ -2,7 +2,6 @@
 
 #projects {
   margin: 0;
-  /* height: 90vw; */
   width: 100vw;
   max-width: 100%;
 }
@@ -24,9 +23,7 @@
   position: relative;
   width: 90vw;
   left: 5vw;
-  /* height: 80vw; */
   top: 0vh;
-  /* border: 2px solid black; */
   display: flex;
   flex-wrap: wrap;
   gap: 2vw;
