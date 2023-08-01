@@ -52,7 +52,6 @@ window.addEventListener("load", () => {
 });
 
 const elementInView = (el) => {
-  const bioSection = document.getElementById("bio");
   const elementTop = el.getBoundingClientRect().top;
   return elementTop <= window.innerHeight;
 };

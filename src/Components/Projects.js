@@ -9,7 +9,6 @@ import moodMusicIcon from "../Images/mood-music-icon.jpg";
 import cloudStorageSystemsIcon from "../Images/cloud-storage-systems-icon.jpg"
 
 
-let projectContent;
 const Projects = () => {
   return (
     <>
@@ -25,7 +24,7 @@ const Projects = () => {
           >
             <div className="project-inner">
               <h3>Flash Card App</h3>
-              <img src = {flashCardsIcon} className="project-img-container" alt = "flash card app picture">
+              <img src = {flashCardsIcon} className="project-img-container" alt = "">
                 
               </img>
               <p className="project-desc">
@@ -42,7 +41,7 @@ const Projects = () => {
           >
             <div className="project-inner">
               <h3>Tetris</h3>
-              <img src = {tetrisIcon} className="project-img-container" alt="teris picture"></img>
+              <img src = {tetrisIcon} className="project-img-container" alt=""></img>
               <p className="project-desc">
                 The classic game of Tetris built in vanilla JavaScript. Web demo
                 version slightly modified to be utilized with React. For the
@@ -56,7 +55,7 @@ const Projects = () => {
           >
             <div className="project-inner">
               <h3>Food For Thought</h3>
-              <img src = {foodForThoughtIcon} className="project-img-container" alt="food for thought picture"></img>
+              <img src = {foodForThoughtIcon} className="project-img-container" alt=""></img>
               <p className="project-desc">
                 A web app designed during a hackathon to connect restaurants and
                 people with leftover food to charities and those in need.
@@ -71,7 +70,7 @@ const Projects = () => {
           >
             <div className="project-inner">
               <h3>Mood Music</h3>
-              <img src = {moodMusicIcon} className="project-img-container" alt="mood music picture"></img>
+              <img src = {moodMusicIcon} className="project-img-container" alt=""></img>
               <p className="project-desc">
                 An app desgined during a hackathon to suggest music to users
                 based on their listening history and current mood. Spotify API
@@ -86,7 +85,7 @@ const Projects = () => {
           >
             <div className="project-inner">
               <h3>Multi-Cloud Storage Systems</h3>
-              <img src = {cloudStorageSystemsIcon} className="project-img-container" alt="cloud storage systems icon"></img>
+              <img src = {cloudStorageSystemsIcon} className="project-img-container" alt=""></img>
               <p className="project-desc">
                 An app for simulating file transfers between local storages and
                 cloud storages utilizing TCP protocols. Built in C, on the
@@ -100,7 +99,7 @@ const Projects = () => {
           >
             <div className="project-inner">
               <h3>Tutor Service Chat App</h3>
-              <img className="project-img-container"></img>
+              <img className="project-img-container" alt=""></img>
               <p className="project-desc">
                 An app where users can provide or seek tutoring services. Users
                 can chat with each other, view chat history, and block other
@@ -127,6 +126,7 @@ const Projects = () => {
           <a
             target="_blank"
             className="repo-link"
+            href="/"
           >
             GitHub Repo
           </a>

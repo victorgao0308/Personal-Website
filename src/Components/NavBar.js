@@ -10,16 +10,16 @@ const NavBar = () => {
     <>
       <ul className="main-nav">
         <li onClick={scrollHome}>
-          <a>Home</a>
+          <button>Home</button>
         </li>
         <li onClick={scrollBio}>
-          <a>Bio</a>
+          <button>Bio</button>
         </li>
         <li onClick={scrollProjects}>
-          <a>Projects</a>
+          <button>Projects</button>
         </li>
         <li onClick={scrollSocials}>
-          <a>Socials</a>
+          <button>Socials</button>
         </li>
       </ul>
 
@@ -34,16 +34,16 @@ const NavBar = () => {
 
         <div className="collapsing-div">
           <li onClick={scrollHome} className="collapse-link hide">
-            <a>Home</a>
+            <button>Home</button>
           </li>
           <li onClick={scrollBio} className="collapse-link hide">
-            <a>Bio</a>
+            <button>Bio</button>
           </li>
           <li onClick={scrollProjects} className="collapse-link hide">
-            <a>Projects</a>
+            <button>Projects</button>
           </li>
           <li onClick={scrollSocials} className="collapse-link hide">
-            <a>Socials</a>
+            <button>Socials</button>
           </li>
         </div>
       </ul>
@@ -141,7 +141,7 @@ function toggleNavMenu() {
 
 function collapseDiv() {
   const collapseDiv = document.querySelector(".collapsing-div");
-  const links = document.querySelectorAll(".collapsing-div a");
+  const links = document.querySelectorAll(".collapsing-div button");
   const collapseLinks = document.querySelectorAll(".collapse-link");
 
   collapseLinks.forEach(link => {

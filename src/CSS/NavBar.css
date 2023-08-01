@@ -20,6 +20,7 @@ ul {
 
 .main-nav li {
   float: left;
+  height: 100%;
 }
 
 .vertical-nav {
@@ -53,7 +54,7 @@ ul {
   height: 0vh;
 }
 
-.collapsing-div li a {
+.collapsing-div li button {
   opacity: 0;
 }
 
@@ -61,27 +62,33 @@ ul {
   height: 4vh;
 }
 
-.main-nav li a {
+.main-nav li button {
   display: block;
-  color: white;
+  background-color: transparent;
   text-align: center;
   padding: 2vmin 16px;
   text-decoration: none;
   font-size: 2.5vh;
+  color: white;
+  border: none;
+  position: relative;
+  height: 100%;
 }
 
-.vertical-nav li a {
+.vertical-nav li button {
   color: white;
   font-size: 2.5vh;
+  background-color: transparent;
+  border: none;
 }
 
-.vertical-nav li:hover a {
+.vertical-nav li:hover button {
   color: rgb(18, 92, 157);
   cursor: pointer;
 }
 
 
-.main-nav a:hover {
+.main-nav button:hover {
   color: rgb(18, 92, 157);
   cursor: pointer;
 }
@@ -107,7 +114,7 @@ ul {
 
 
 @media screen and (max-width: 500px) {
-  .main-nav li a {
+  .main-nav li button {
     display: none;
   }
   .navbars {
