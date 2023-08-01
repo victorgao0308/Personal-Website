@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap");
+
+
 body {
   display: block;
 }
@@ -56,6 +59,7 @@ ul {
 
 .collapsing-div li button {
   opacity: 0;
+  font-family: "Didact Gothic", sans-serif;
 }
 
 .bars {
@@ -73,6 +77,7 @@ ul {
   border: none;
   position: relative;
   height: 100%;
+  font-family: "Didact Gothic", sans-serif;
 }
 
 .vertical-nav li button {

@@ -30,8 +30,6 @@ h1 {
 }
 
 .welcome-text-container {
-  /* width: 55vw;
-  height: 50vh; */
   position: absolute;
   height: 60vmin;
   width: 50vw;

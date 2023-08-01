@@ -47,6 +47,7 @@
   width: 4vw;
   display: flex;
   flex-wrap: wrap;
+  gap: 1vh;
 }
 
 .social-text-container {

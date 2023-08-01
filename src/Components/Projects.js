@@ -7,6 +7,7 @@ import tetrisIcon from "../Images/tetris-icon.jpg"
 import foodForThoughtIcon from "../Images/food-for-thought-icon.jpg"
 import moodMusicIcon from "../Images/mood-music-icon.jpg";
 import cloudStorageSystemsIcon from "../Images/cloud-storage-systems-icon.jpg"
+import chatAppIcon from "../Images/chat-app-icon.jpg"
 
 
 const Projects = () => {
@@ -99,7 +100,7 @@ const Projects = () => {
           >
             <div className="project-inner">
               <h3>Tutor Service Chat App</h3>
-              <img className="project-img-container" alt=""></img>
+              <img src = {chatAppIcon} className="project-img-container" alt=""></img>
               <p className="project-desc">
                 An app where users can provide or seek tutoring services. Users
                 can chat with each other, view chat history, and block other
