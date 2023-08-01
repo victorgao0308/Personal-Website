@@ -5,7 +5,8 @@ import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import flashCardsIcon from "../Images/flashcards-icon.jpg";
 import tetrisIcon from "../Images/tetris-icon.jpg"
 import foodForThoughtIcon from "../Images/food-for-thought-icon.jpg"
-import moodMusicIcon from "../Images/mood-music-icon.jpg"
+import moodMusicIcon from "../Images/mood-music-icon.jpg";
+import cloudStorageSystemsIcon from "../Images/cloud-storage-systems-icon.jpg"
 
 
 let projectContent;
@@ -15,9 +16,7 @@ const Projects = () => {
       <div className="section" id="projects">
         <h1 className="projects-header scroll">Projects</h1>
         <h3 className="projects-subheader scroll">
-          Tap on each card for more info, GitHub repo links, and web demos!
-          <br></br>
-          (Web demo currently only available for Tetris)
+          Tap on each card for more info and GitHub repo links!
         </h3>
         <div className="projects-container">
           <div
@@ -87,7 +86,7 @@ const Projects = () => {
           >
             <div className="project-inner">
               <h3>Multi-Cloud Storage Systems</h3>
-              <img className="project-img-container"></img>
+              <img src = {cloudStorageSystemsIcon} className="project-img-container" alt="cloud storage systems icon"></img>
               <p className="project-desc">
                 An app for simulating file transfers between local storages and
                 cloud storages utilizing TCP protocols. Built in C, on the
