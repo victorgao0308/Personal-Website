@@ -26,13 +26,15 @@
 .bio-picture {
   position: absolute;
   width: 30vw;
-  height: 30vw;
-  left: 2.5vw;
+  height: 22.5vw;
+  top: 3.75vw;
+  /* left: 2.5vw; */
   --s: 2vw;
   border: calc(2 * var(--s)) solid #0000;
   outline: 0.35vw solid #000;
   outline-offset: calc(-1 * var(--s));
-  background: conic-gradient(from 90deg at 0.2vw 0.2vw, #0000 25%, #000 0);
+  background: conic-gradient(from 90deg at 1vw 1vw, #0000 100%, #000 0);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .bio-desc-container {
@@ -65,13 +67,14 @@
   .bio-picture {
     position: relative;
     width: 50vw;
-    height: 50vw;
+    height: 37.5vw;
     left: 11.5vw;
     --s: 3vw;
     border: calc(2 * var(--s)) solid #0000;
     outline: 0.35vw solid #000;
     outline-offset: calc(-1 * var(--s));
-    background: conic-gradient(from 90deg at 0.2vw 0.2vw, #0000 25%, #000 0);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    overflow: auto;
   }
 
   .bio-desc-container {

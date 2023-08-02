@@ -9,8 +9,8 @@ const Contact = () => {
   return (
     <>
       <div className="section" id="socials">
-        <h1 className="socials-header">Socials</h1>
-        <h3 className="socials-subheader">Feel free to contact me!</h3>
+        <h1 className="socials-header scroll slide-right">Socials</h1>
+        <h3 className="socials-subheader scroll slide-right">Feel free to contact me!</h3>
         <div className="socials-container">
           <div className="social-imgs-container">
             <FontAwesomeIcon icon={faEnvelope} className="contact-icon link" onClick={openEmail} />

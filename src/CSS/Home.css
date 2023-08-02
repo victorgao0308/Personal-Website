@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap");
 
-
 h1 {
   margin: 0;
 }
@@ -27,6 +26,7 @@ h1 {
   height: 60vh;
   left: 10vw;
   top: 15vh;
+  /* overflow: hidden; */
 }
 
 .welcome-text-container {
@@ -39,6 +39,7 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 10;
 }
 
 .welcome-text {
@@ -46,20 +47,21 @@ h1 {
   max-width: 100%;
   color: white;
   margin: auto;
-  font-size: 6.3vw;
-  z-index: 5;
+  font-size: 6.3vmax;
+  z-index: 10;
   font-family: "Caveat", cursive;
   vertical-align: center;
 }
 
 .home-picture {
-  width: 40vmin;
-  height: 40vmin;
+  width: 35vmax;
+  height: 43.75vmax;
   position: absolute;
+  right: 0%;
+  border-radius: 21% 79% 37% 63% / 73% 25% 75% 27% ;
   top: 50%;
   transform: translate(0%, -50%);
-  right: 0%;
-  /* border: 2px solid black; */
+  z-index: 1;
 }
 
 .project-link-container {
@@ -132,5 +134,19 @@ span:nth-child(3) {
   100% {
     opacity: 1;
     filter: blur(0px);
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .home-container {
+    width: 95vw;
+    height: 60vh;
+    left: 2.5vw;
+  }
+  .home-picture {
+    width: 30vmax;
+    height: 47.5vmax;
+    position: absolute;
+    right: 0vw;
   }
 }

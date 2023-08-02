@@ -1,6 +1,6 @@
 import React from "react";
 import "../CSS/Home.css";
-import trump from "../Images/trump.png"
+import homePic from "../Images/home-pic.png"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
@@ -31,7 +31,7 @@ const Home = () => {
               {textContent}
             </h2>
           </div>
-          <img src = {trump} className="home-picture" alt = "profile-pic"></img>
+          <img src = {homePic} className="home-picture" alt = "profile-pic"></img>
         </div>
 
         <div className="project-link-container">

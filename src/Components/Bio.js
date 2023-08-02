@@ -1,6 +1,6 @@
 import React from "react";
 import "../CSS/Bio.css";
-import trump from "../Images/trump.png";
+import bioPic from "../Images/bio-pic.jpg";
 
 let scrollElements;
 
@@ -12,9 +12,9 @@ const Bio = () => {
 
         <div className="bio-container">
           <img
-            src={trump}
+            src={bioPic}
             className="bio-picture scroll slide-right"
-            alt="bio-pic"
+            alt=""
           ></img>
           <div className="bio-desc-container scroll slide-right">
             <p className="bio-desc">
