@@ -270,15 +270,31 @@
   font-family: "Indie Flower", cursive;
 }
 
-.repo-link {
+.repo-demo-container {
+  width: 80vw;
+  height: 30vw;
   position: absolute;
-  text-decoration: underline;
-  font-size: 2vmax;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 0%);
+  display: flex;
+  justify-content: center;
+  gap: 1vw;
 }
 
-.repo-link:hover {
+.repo-link{
+  position: relative;
+  text-decoration: underline;
+  font-size: 2vmax;
+}
+
+.demo-link{
+  position: relative;
+  text-decoration: underline;
+  font-size: 2vmax;
+}
+
+
+.repo-link:hover, .demo-link:hover {
   cursor: pointer;
   color: rgb(31, 150, 255);
 }

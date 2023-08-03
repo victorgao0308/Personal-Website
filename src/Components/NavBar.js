@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 let navShowing;
+const address = "http://localhost:3000/";
 
 const NavBar = () => {
   return (
@@ -125,17 +126,19 @@ window.addEventListener("load", toggleNavMenu);
 window.addEventListener("resize", toggleNavMenu);
 
 function toggleNavMenu() {
-  const verticalNav = document.querySelector(".vertical-nav");
-  const mainNav = document.querySelector(".main-nav");
+  if (window.location.href === address) {
+    const verticalNav = document.querySelector(".vertical-nav");
+    const mainNav = document.querySelector(".main-nav");
 
-  navShowing = window.innerWidth <= 500 ? false : true;
-  navShowing = window.innerWidth <= 500 ? false : true;
-  if (!navShowing) {
-    verticalNav.classList.remove("hide");
-    mainNav.classList.add("hide");
-  } else {
-    verticalNav.classList.add("hide");
-    mainNav.classList.remove("hide");
+    navShowing = window.innerWidth <= 500 ? false : true;
+    navShowing = window.innerWidth <= 500 ? false : true;
+    if (!navShowing) {
+      verticalNav.classList.remove("hide");
+      mainNav.classList.add("hide");
+    } else {
+      verticalNav.classList.add("hide");
+      mainNav.classList.remove("hide");
+    }
   }
 }
 
@@ -144,10 +147,9 @@ function collapseDiv() {
   const links = document.querySelectorAll(".collapsing-div button");
   const collapseLinks = document.querySelectorAll(".collapse-link");
 
-  collapseLinks.forEach(link => {
-    link.classList.toggle("hide")
-  })
-
+  collapseLinks.forEach((link) => {
+    link.classList.toggle("hide");
+  });
 
   if (collapseDiv.style.height !== `30vh`) collapseDiv.style.height = `30vh`;
   else {
@@ -157,9 +159,7 @@ function collapseDiv() {
     });
   }
 
-
   links.forEach((link, index) => {
     link.classList.toggle("active");
   });
 }
-

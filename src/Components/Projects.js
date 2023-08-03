@@ -124,6 +124,9 @@ const Projects = () => {
           <p className="content-desc">
 
           </p>
+
+
+          <div className="repo-demo-container">
           <a
             target="_blank"
             className="repo-link"
@@ -131,6 +134,15 @@ const Projects = () => {
           >
             GitHub Repo
           </a>
+
+          <a
+            target="_blank"
+            className="demo-link"
+            href="/tetris"
+          >
+            Live Demo
+          </a>
+          </div>
         </div>
       </div>
     </>
@@ -155,6 +167,8 @@ function displayProjectInfoFlashCards() {
   contentHeader.innerHTML = `Flash Cards App`;
   const repoLink = document.querySelector(".repo-link");
   repoLink.innerHTML = "GitHub Repo";
+  const demoLink = document.querySelector(".demo-link");
+  demoLink.innerHTML = "";
   repoLink.href = `https://github.com/victorgao0308/Flash-Cards-App-Full-Stack`;
   const contentDesc = document.querySelector(".content-desc");
   contentDesc.innerHTML = `A flash card app where users can create, review, and study flash
@@ -187,6 +201,8 @@ function displayProjectInfoTetris() {
   contentHeader.innerHTML = `Tetris`;
   const repoLink = document.querySelector(".repo-link");
   repoLink.innerHTML = "GitHub Repo";
+  const demoLink = document.querySelector(".demo-link");
+  demoLink.innerHTML = "Live Demo";
   repoLink.href = `https://github.com/victorgao0308/tetris`;
   const contentDesc = document.querySelector(".content-desc");
   contentDesc.innerHTML = `The classic game of Tetris created with vanilla JavaScript. The game board is composed of 200 individual squares, in a 10 x 20 layout. There is also an additional few rows of blocks above the game board to serve as the spawn location of the blocks. If the blocks reach this spawn area, the game will be over.
@@ -205,7 +221,9 @@ function displayProjectInfoTetris() {
   <br></br>
   Clearing lines awards points, and upon reaching point thresholds, the level will increase, causing the blockas to fall faster.
   <br></br>
-  There is also a hard mode that increases the difficulty of the game, but provides more points per line clear.`;
+  There is also a hard mode that increases the difficulty of the game, but provides more points per line clear.
+  <br></br>
+  Note: Demo is not mobile compatible.`;
 }
 
 function displayProjectInfoFoodForThought() {
@@ -214,6 +232,8 @@ function displayProjectInfoFoodForThought() {
   contentHeader.innerHTML = `Food For Thought`;
   const repoLink = document.querySelector(".repo-link");
   repoLink.innerHTML = "GitHub Repo";
+  const demoLink = document.querySelector(".demo-link");
+  demoLink.innerHTML = "";
   repoLink.href = `https://github.com/Pixelgost/FoodforThought`;
   const contentDesc = document.querySelector(".content-desc");
   contentDesc.innerHTML = `A wep app desgined during a hackathon with the vision to connect restaurants or individuals with leftover food to charities or those in need of food. Users are able to sign in via Google, and choose whether they would like to give food, or receive food.
@@ -231,6 +251,8 @@ function displayProjectInfoMoodMusic() {
   contentHeader.innerHTML = `Mood Music`;
   const repoLink = document.querySelector(".repo-link");
   repoLink.innerHTML = "GitHub Repo";
+  const demoLink = document.querySelector(".demo-link");
+  demoLink.innerHTML = "";
   repoLink.href = `https://github.com/victorgao0308/MoodMusic`;
   const contentDesc = document.querySelector(".content-desc");
   contentDesc.innerHTML = `An app designed during a hackathon that suggests music to users based on their current mood and their listening history.
@@ -248,6 +270,8 @@ function displayProjectInfoCloud() {
   contentHeader.innerHTML = `Multi-Cloud Storage Systems`;
   const repoLink = document.querySelector(".repo-link");
   repoLink.innerHTML = "GitHub Repo";
+  const demoLink = document.querySelector(".demo-link");
+  demoLink.innerHTML = "";
   repoLink.href = `https://github.com/victorgao0308/CloudStorageSystems`;
   const contentDesc = document.querySelector(".content-desc");
   contentDesc.innerHTML = `An app that simulates file transfers between local storages and cloud-based storages. Part of a research project done at the University of Kentucky.
@@ -264,6 +288,8 @@ function displayProjectInfoChatApp() {
   const repoLink = document.querySelector(".repo-link");
   repoLink.innerHTML = "";
   repoLink.href = "";
+  const demoLink = document.querySelector(".demo-link");
+  demoLink.innerHTML = "";
   const contentDesc = document.querySelector(".content-desc");
   contentDesc.innerHTML = `An app where users can provide or seek tutoring services. Users can create accounts as either role, and can communicate to each other via a messaging system. Within this messaging system, users can choose to block other users, or to become invisible, where no other users will be able to see that they are on the platform.
   <br></br>

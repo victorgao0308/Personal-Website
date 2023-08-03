@@ -1,9 +1,10 @@
 import React from "react";
 import "../CSS/Home.css";
-import homePic from "../Images/home-pic.png"
+import homePic from "../Images/home-pic.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
+const address = "http://localhost:3000/";
 let textContent;
 let navShowing;
 const suffixes = [
@@ -31,15 +32,20 @@ const Home = () => {
               {textContent}
             </h2>
           </div>
-          <img src = {homePic} className="home-picture" alt = "profile-pic"></img>
+          <img src={homePic} className="home-picture" alt="profile-pic"></img>
         </div>
 
         <div className="project-link-container">
           <h3 className="fade-in-text" onClick={scrollProjects}>
             <span>View </span>
             <span>Projects </span>
-            <span><FontAwesomeIcon icon={faChevronDown} className="bounce arrow-down-icon"/></span>
-            </h3>
+            <span>
+              <FontAwesomeIcon
+                icon={faChevronDown}
+                className="bounce arrow-down-icon"
+              />
+            </span>
+          </h3>
         </div>
       </div>
     </>
@@ -89,22 +95,23 @@ function typeWriterDelete(length) {
   }, 100);
 }
 window.addEventListener("load", () => {
-  let num = 0;
-  navShowing = window.innerWidth <= 500 ? false : true;
-  navShowing = window.innerWidth <= 500 ? false : true;
+  if (window.location.href === address) {
+    let num = 0;
+    navShowing = window.innerWidth <= 500 ? false : true;
+    navShowing = window.innerWidth <= 500 ? false : true;
 
-  setTimeout(() => {
-    typeWriter("Hello! I am Victor Gao, a " + pool[num], false);
-    pool.splice(num, 1);
-    if (pool.length === 0) pool = [...suffixes];
-  }, 500)
-
+    setTimeout(() => {
+      typeWriter("Hello! I am Victor Gao, a " + pool[num], false);
+      pool.splice(num, 1);
+      if (pool.length === 0) pool = [...suffixes];
+    }, 500);
+  }
 });
 
-window.addEventListener("resize", ()=> {
+window.addEventListener("resize", () => {
   navShowing = window.innerWidth <= 500 ? false : true;
   navShowing = window.innerWidth <= 500 ? false : true;
-})
+});
 
 function scrollProjects() {
   let navHeight;

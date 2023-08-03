@@ -18,13 +18,14 @@ h1 {
     rgba(205, 240, 255, 1) 0%,
     rgba(113, 188, 255, 1) 100%
   );
+  overflow: hidden;
 }
 
 .home-container {
   position: absolute;
-  width: 85vw;
+  width: 95vw;
   height: 60vh;
-  left: 10vw;
+  left: 2.5vw;
   top: 15vh;
   /* overflow: hidden; */
 }
@@ -54,11 +55,11 @@ h1 {
 }
 
 .home-picture {
-  width: 35vmax;
-  height: 43.75vmax;
+  width: 32vmax;
+  height: 40vmax;
   position: absolute;
   right: 0%;
-  border-radius: 21% 79% 37% 63% / 73% 25% 75% 27% ;
+  border-radius: 72% 28% 25% 75% / 52% 54% 46% 48%;
   top: 50%;
   transform: translate(0%, -50%);
   z-index: 1;
@@ -74,7 +75,7 @@ h1 {
 .project-link-container h3 {
   margin: 0;
   color: white;
-  font-size: 2vw;
+  font-size: 2vmax;
   cursor: pointer;
 }
 
@@ -145,7 +146,7 @@ span:nth-child(3) {
   }
   .home-picture {
     width: 30vmax;
-    height: 47.5vmax;
+    height: 37.5vmax;
     position: absolute;
     right: 0vw;
   }
