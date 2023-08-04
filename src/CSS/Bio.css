@@ -104,13 +104,9 @@
 }
 
 .scroll {
-  /* opacity: 0; */
-  /* transition: opacity 500ms; */
+  transition: opacity 500ms;
 }
 
-.scrolled {
-  /* opacity: 1; */
-}
 
 .scrolled.slide-right:nth-child(1) {
   animation: slide-in-right 1s ease-in-out both;
@@ -125,11 +121,11 @@
   0% {
     -webkit-transform: translateX(10vw);
     transform: translateX(10vw);
-    /* opacity: 0; */
+    opacity: 0;
   }
   100% {
     -webkit-transform: translateX(0);
     transform: translateX(0);
-    /* opacity: 1; */
+    opacity: 1;
   }
 }
