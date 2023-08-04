@@ -151,3 +151,18 @@ span:nth-child(3) {
     right: 0vw;
   }
 }
+
+@media screen and (max-width: 750px) {
+  .project-link-container {
+    bottom: 25vh;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .project-link-container {
+    bottom: 30vh;
+  }
+}
+
+
+

@@ -105,8 +105,12 @@
 
 .scroll {
   transition: opacity 500ms;
+  opacity: 1;
 }
 
+.scrolled {
+  opacity: 0;
+}
 
 .scrolled.slide-right:nth-child(1) {
   animation: slide-in-right 1s ease-in-out both;
