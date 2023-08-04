@@ -26,7 +26,7 @@ const NavBar = () => {
         </li>
       </ul>
 
-      <ul className="vertical-nav">
+      <ul className="vertical-nav hide">
         <li className="bars">
           <FontAwesomeIcon
             icon={faBars}
