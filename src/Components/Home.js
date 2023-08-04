@@ -82,7 +82,7 @@ function typeWriter(text, flag) {
 
 function typeWriterDelete(length) {
   const textElement = document.querySelector(".welcome-text");
-  let n = 0;
+  let n = 1;
   let timer = setInterval(() => {
     n = n + 1;
     let text = textElement.textContent;
