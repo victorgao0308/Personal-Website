@@ -172,7 +172,7 @@ window.addEventListener("load", () => {
           let classes = Array.from(blocks[i].classList);
           let nextBlock = i + 10;
           for (let j = 0; j < classes.length; j++) {
-            if (classes[j] !== "block" && classes[j] != "spawn") {
+            if (classes[j] !== "block" && classes[j] !== "spawn") {
               blocks[i].classList.remove(classes[j]);
               blocks[nextBlock].classList.add(classes[j]);
             }
@@ -261,6 +261,9 @@ window.addEventListener("load", () => {
           scoreText.classList.add("hide-txt");
           levelText.classList.add("hide-txt");
           break;
+
+        default:
+          break;
       }
     }
 
@@ -310,7 +313,7 @@ window.addEventListener("load", () => {
       for (let i = index - 1; i >= 40; i--) {
         let classes = Array.from(blocks[i].classList);
         for (let j = 0; j < classes.length; j++) {
-          if (classes[j] !== "block" && classes[j] != "spawn") {
+          if (classes[j] !== "block" && classes[j] !== "spawn") {
             blocks[i].classList.remove(classes[j]);
             blocks[i + 10].classList.add(classes[j]);
           }
@@ -361,7 +364,7 @@ window.addEventListener("load", () => {
         let leftBlock = blocks[id - 1];
         newBlocks.push(leftBlock);
         for (let j = 0; j < classList.length; j++) {
-          if (classList[j] != "block" && classList[j] != "spawn") {
+          if (classList[j] !== "block" && classList[j] !== "spawn") {
             block.classList.remove(classList[j]);
             classes.add(classList[j]);
           }
@@ -384,7 +387,7 @@ window.addEventListener("load", () => {
         let rightBlock = blocks[id + 1];
         newBlocks.push(rightBlock);
         for (let j = 0; j < classList.length; j++) {
-          if (classList[j] != "block" && classList[j] != "spawn") {
+          if (classList[j] !== "block" && classList[j] !== "spawn") {
             block.classList.remove(classList[j]);
             classes.add(classList[j]);
           }
@@ -399,7 +402,7 @@ window.addEventListener("load", () => {
 
     // rotates a piece
     function rotate(blocksArray) {
-      if (blocksArray.length == 0) {
+      if (blocksArray.length === 0) {
         return;
       }
 
@@ -429,7 +432,7 @@ window.addEventListener("load", () => {
           // change the orientation state if rotation was successful
           if (canRotate) {
             orient += 1;
-            if (orient == 5) {
+            if (orient === 5) {
               orient = 1;
             }
           }
@@ -443,7 +446,7 @@ window.addEventListener("load", () => {
           // change the orientation state if rotation was successful
           if (canRotate) {
             orient += 1;
-            if (orient == 5) {
+            if (orient === 5) {
               orient = 1;
             }
           }
@@ -457,7 +460,7 @@ window.addEventListener("load", () => {
           // change the orientation state if rotation was successful
           if (canRotate) {
             orient += 1;
-            if (orient == 5) {
+            if (orient === 5) {
               orient = 1;
             }
           }
@@ -470,7 +473,7 @@ window.addEventListener("load", () => {
         if (canRotate) {
           // change the orientation state if rotation was successful
           orient += 1;
-          if (orient == 5) {
+          if (orient === 5) {
             orient = 1;
           }
         }
@@ -482,7 +485,7 @@ window.addEventListener("load", () => {
         if (canRotate) {
           // change the orientation state if rotation was successful
           orient += 1;
-          if (orient == 5) {
+          if (orient === 5) {
             orient = 1;
           }
         }
@@ -494,7 +497,7 @@ window.addEventListener("load", () => {
         if (canRotate) {
           // change the orientation state if rotation was successful
           orient += 1;
-          if (orient == 5) {
+          if (orient === 5) {
             orient = 1;
           }
         }
@@ -508,7 +511,7 @@ window.addEventListener("load", () => {
       let id = parseInt(anchor.getAttribute("id"));
 
       // first orientation
-      if (orient == 1) {
+      if (orient === 1) {
         let blockOne = id + 11;
         let blockTwo = id + 21;
 
@@ -555,13 +558,13 @@ window.addEventListener("load", () => {
       }
 
       // second orientation
-      if (orient == 2) {
+      if (orient === 2) {
         let blockOne = id + 20;
         let blockTwo = id + 19;
 
         // try wall kicking left
         if (
-          id % 10 == 0 ||
+          id % 10 === 0 ||
           blockOne < 0 ||
           blockTwo > 239 ||
           blocks[blockOne].classList.contains("static") ||
@@ -602,7 +605,7 @@ window.addEventListener("load", () => {
       }
 
       // third orientation
-      if (orient == 3) {
+      if (orient === 3) {
         let blockOne = id - 11;
         let blockTwo = id - 1;
 
@@ -648,7 +651,7 @@ window.addEventListener("load", () => {
       }
 
       // fourth orientation
-      if (orient == 4) {
+      if (orient === 4) {
         let blockOne = id + 1;
         let blockTwo = id + 2;
 
@@ -702,7 +705,7 @@ window.addEventListener("load", () => {
       let id = parseInt(anchor.getAttribute("id"));
 
       // first orientation
-      if (orient == 1) {
+      if (orient === 1) {
         let blockOne = id + 2;
         let blockTwo = id + 21;
 
@@ -749,7 +752,7 @@ window.addEventListener("load", () => {
       }
 
       // second orientation
-      if (orient == 2) {
+      if (orient === 2) {
         let blockOne = id + 8;
         let blockTwo = id + 20;
 
@@ -796,7 +799,7 @@ window.addEventListener("load", () => {
       }
 
       // third orientation
-      if (orient == 3) {
+      if (orient === 3) {
         let blockOne = id - 9;
         let blockTwo = id + 10;
 
@@ -842,13 +845,13 @@ window.addEventListener("load", () => {
       }
 
       // fourth orientation
-      if (orient == 4) {
+      if (orient === 4) {
         let blockOne = id - 1;
         let blockTwo = id + 11;
 
         // try wall kicking from the right
         if (
-          id % 10 == 9 ||
+          id % 10 === 9 ||
           blockOne < 0 ||
           blockTwo > 239 ||
           blocks[blockOne].classList.contains("static") ||
@@ -896,7 +899,7 @@ window.addEventListener("load", () => {
       let id = parseInt(anchor.getAttribute("id"));
 
       // first orientation
-      if (orient == 1) {
+      if (orient === 1) {
         let blockOne = id - 8;
         let blockTwo = id + 12;
         let blockThree = id + 22;
@@ -984,7 +987,7 @@ window.addEventListener("load", () => {
       }
 
       // second orientation
-      if (orient == 2) {
+      if (orient === 2) {
         let blockOne = id + 18;
         let blockTwo = id + 19;
         let blockThree = id + 21;
@@ -1028,7 +1031,7 @@ window.addEventListener("load", () => {
         else if (
           blockOne < 0 ||
           blockThree > 239 ||
-          id % 10 == 9 ||
+          id % 10 === 9 ||
           blocks[blockThree].classList.contains("static")
         ) {
           let newOne = id + 17;
@@ -1074,7 +1077,7 @@ window.addEventListener("load", () => {
       }
 
       // third orientation
-      if (orient == 3) {
+      if (orient === 3) {
         let blockOne = id - 19;
         let blockTwo = id - 9;
         let blockThree = id + 11;
@@ -1162,14 +1165,14 @@ window.addEventListener("load", () => {
       }
 
       // fourth orientation
-      if (orient == 4) {
+      if (orient === 4) {
         let blockOne = id + 9;
         let blockTwo = id + 11;
         let blockThree = id + 12;
 
         // try to kick from left
         if (
-          id % 10 == 0 ||
+          id % 10 === 0 ||
           blockOne < 0 ||
           blockThree > 239 ||
           blocks[blockOne].classList.contains("static")
@@ -1259,7 +1262,7 @@ window.addEventListener("load", () => {
       let id = parseInt(anchor.getAttribute("id"));
 
       // first orientation
-      if (orient == 1) {
+      if (orient === 1) {
         let blockOne = id - 1;
         let blockTwo = id + 19;
         let blockThree = id + 20;
@@ -1309,14 +1312,14 @@ window.addEventListener("load", () => {
       }
 
       // second orientation
-      if (orient == 2) {
+      if (orient === 2) {
         let blockOne = id + 9;
         let blockTwo = id + 11;
         let blockThree = id + 19;
 
         // try to kick from the left
         if (
-          id % 10 == 0 ||
+          id % 10 === 0 ||
           blockOne < 0 ||
           blockThree > 239 ||
           blocks[blockOne].classList.contains("static") ||
@@ -1360,7 +1363,7 @@ window.addEventListener("load", () => {
       }
 
       // third orientation
-      if (orient == 3) {
+      if (orient === 3) {
         let blockOne = id - 10;
         let blockTwo = id - 9;
         let blockThree = id + 11;
@@ -1411,7 +1414,7 @@ window.addEventListener("load", () => {
 
       // fourth orientation
 
-      if (orient == 4) {
+      if (orient === 4) {
         let blockOne = id + 2;
         let blockTwo = id + 10;
         let blockThree = id + 12;
@@ -1469,7 +1472,7 @@ window.addEventListener("load", () => {
       let id = parseInt(anchor.getAttribute("id"));
 
       // first orientation
-      if (orient == 1) {
+      if (orient === 1) {
         let blockOne = id + 1;
         let blockTwo = id + 2;
         let blockThree = id + 21;
@@ -1524,14 +1527,14 @@ window.addEventListener("load", () => {
       }
 
       // second orientation
-      if (orient == 2) {
+      if (orient === 2) {
         let blockOne = id + 9;
         let blockTwo = id + 11;
         let blockThree = id + 21;
 
         // try to kick from the left
         if (
-          id % 10 == 0 ||
+          id % 10 === 0 ||
           blockOne < 0 ||
           blockThree > 239 ||
           blocks[blockOne].classList.contains("static") ||
@@ -1580,7 +1583,7 @@ window.addEventListener("load", () => {
       }
 
       // third orientation
-      if (orient == 3) {
+      if (orient === 3) {
         let blockOne = id - 9;
         let blockTwo = id + 10;
         let blockThree = id + 11;
@@ -1635,14 +1638,14 @@ window.addEventListener("load", () => {
       }
 
       // fourth orientation
-      if (orient == 4) {
+      if (orient === 4) {
         let blockOne = id - 1;
         let blockTwo = id + 9;
         let blockThree = id + 11;
 
         // try to kick from the right
         if (
-          id % 10 == 9 ||
+          id % 10 === 9 ||
           blockOne < 0 ||
           blockThree > 239 ||
           blocks[blockOne].classList.contains("static") ||
@@ -1698,7 +1701,7 @@ window.addEventListener("load", () => {
       let id = parseInt(anchor.getAttribute("id"));
 
       // first orientation
-      if (orient == 1) {
+      if (orient === 1) {
         let blockOne = id - 9;
 
         // try to kick off the top
@@ -1738,12 +1741,12 @@ window.addEventListener("load", () => {
       }
 
       // second orientation
-      if (orient == 2) {
+      if (orient === 2) {
         let blockOne = id + 11;
 
         // try to kick off the right
         if (
-          id % 10 == 9 ||
+          id % 10 === 9 ||
           blockOne < 0 ||
           blockOne > 239 ||
           blocks[blockOne].classList.contains("static")
@@ -1779,7 +1782,7 @@ window.addEventListener("load", () => {
       }
 
       // third orientation
-      if (orient == 3) {
+      if (orient === 3) {
         let blockOne = id + 20;
 
         // try to kick off the bottom
@@ -1819,12 +1822,12 @@ window.addEventListener("load", () => {
       }
 
       // fourth orientation
-      if (orient == 4) {
+      if (orient === 4) {
         let blockOne = id + 9;
 
         // try to kick off the left
         if (
-          id % 10 == 0 ||
+          id % 10 === 0 ||
           blockOne < 0 ||
           blockOne > 239 ||
           blocks[blockOne].classList.contains("static")
