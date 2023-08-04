@@ -1,6 +1,6 @@
 import React from "react";
 import "../CSS/Footer.css";
-const address = "http://localhost:3000/";
+const address = "https://master.d3f5w0adcbzt54.amplifyapp.com/";
 
 const Footer = () => {
   return (

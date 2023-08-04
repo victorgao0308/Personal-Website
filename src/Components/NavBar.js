@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 let navShowing;
-const address = "http://localhost:3000/";
+const address = "https://master.d3f5w0adcbzt54.amplifyapp.com/";
 
 const NavBar = () => {
   return (

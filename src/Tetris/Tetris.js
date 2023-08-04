@@ -1,7 +1,7 @@
 import React from "react";
 import "./Tetris.css";
 
-const address = "http://localhost:3000/tetris";
+const address = "https://master.d3f5w0adcbzt54.amplifyapp.com/tetris";
 const Tetris = () => {
   return (
     <div className="tetris">
