@@ -3,7 +3,9 @@ import "../CSS/TopBtn.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretUp } from "@fortawesome/free-solid-svg-icons";
 
-const address = "https://master.d3f5w0adcbzt54.amplifyapp.com/";
+import { webAddress } from "../Address";
+
+const address = webAddress;
 
 const TopBtn = () => {
   return (

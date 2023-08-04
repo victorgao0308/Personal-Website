@@ -3,8 +3,10 @@ import "../CSS/NavBar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 
+
+import { webAddress } from "../Address";
 let navShowing;
-const address = "https://master.d3f5w0adcbzt54.amplifyapp.com/";
+const address = webAddress;
 
 const NavBar = () => {
   return (

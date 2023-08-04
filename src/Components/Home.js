@@ -4,7 +4,9 @@ import homePic from "../Images/home-pic.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
-const address = "https://master.d3f5w0adcbzt54.amplifyapp.com/";
+import { webAddress } from "../Address";
+
+const address = webAddress;
 let textContent;
 let navShowing;
 const suffixes = [
