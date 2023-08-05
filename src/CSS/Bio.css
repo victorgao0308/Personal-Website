@@ -83,7 +83,7 @@
     width: 50vw;
     left: 11.5vw;
     overflow: auto;
-    top: 2vw;
+    top: 6vh;
     --s: 3vw;
     right: 2.5vw;
     border: calc(2 * var(--s)) solid #0000;
