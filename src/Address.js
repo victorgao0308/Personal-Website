@@ -1,1 +1,1 @@
-export const webAddress = "https://master.d3f5w0adcbzt54.amplifyapp.com/";
+export const webAddress = "https://victorgaodev.com/";
