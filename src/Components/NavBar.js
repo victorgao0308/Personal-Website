@@ -123,7 +123,9 @@ function scrollSocials() {
   });
 }
 
-window.addEventListener("load", toggleNavMenu);
+window.addEventListener("load", () => {
+  setTimeout(toggleNavMenu, 100)
+});
 
 window.addEventListener("resize", toggleNavMenu);
 
@@ -161,7 +163,7 @@ function collapseDiv() {
     });
   }
 
-  links.forEach((link, index) => {
+  links.forEach((link) => {
     link.classList.toggle("active");
   });
 }

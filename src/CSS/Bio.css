@@ -107,7 +107,7 @@
   opacity: 0;
 }
 
-.scroll {
+.scroll::after{
   transition: opacity 500ms;
   opacity: 1;
 }

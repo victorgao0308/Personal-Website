@@ -14,8 +14,8 @@ const Projects = () => {
   return (
     <>
       <div className="section" id="projects">
-        <h1 className="projects-header scroll">Projects</h1>
-        <h3 className="projects-subheader scroll">
+        <h1 className="projects-header scroll slide-right">Projects</h1>
+        <h3 className="projects-subheader scroll slide-right">
           Tap on each card for more info and GitHub repo links!
         </h3>
         <div className="projects-container">

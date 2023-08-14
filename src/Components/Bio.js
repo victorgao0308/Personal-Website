@@ -47,8 +47,10 @@ const Bio = () => {
 export default Bio;
 
 window.addEventListener("load", () => {
-  scrollElements = document.querySelectorAll(".scroll");
-  handleScrollAnimation();
+  setTimeout(() => {
+    scrollElements = document.querySelectorAll(".scroll");
+    handleScrollAnimation();
+  }, 500)
 });
 
 const elementInView = (el) => {

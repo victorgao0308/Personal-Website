@@ -4,6 +4,7 @@
   margin: 0;
   width: 100vw;
   max-width: 100%;
+  overflow-x: hidden;
 }
 
 .projects-header {

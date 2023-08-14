@@ -14,10 +14,14 @@ const Footer = () => {
 export default Footer;
 
 window.addEventListener("load", () => {
-  if (window.location.href === address) {
-    const footerText = document.querySelector(".footer-text");
-    let year = new Date().getFullYear();
 
-    footerText.innerHTML = `&copy; Victor Gao, ${year}. All rights reserved.`;
-  }
+  setTimeout(()=> {
+    if (window.location.href === address) {
+      const footerText = document.querySelector(".footer-text");
+      let year = new Date().getFullYear();
+  
+      footerText.innerHTML = `&copy; Victor Gao, ${year}. All rights reserved.`;
+    }
+  }, 500)
+
 });

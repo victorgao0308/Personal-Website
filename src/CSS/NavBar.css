@@ -32,7 +32,7 @@ ul {
   height: 8vh;
 }
 
-.vertical-nav-active {
+.vertical-nav-active::after {
   position: -webkit-sticky; /* safari */
   position: sticky;
   display: block;
