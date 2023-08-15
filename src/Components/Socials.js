@@ -21,7 +21,7 @@ const Contact = () => {
           <div className="social-text-container">
             <p className="contact-info link" onClick={openEmail}>victorgao0308@gmail.com</p>
             <p className="contact-info link" onClick={openLinkedIn}>
-              https://www.linkedin.com/in/victorgao0308/
+              https://www.linkedin.com/in/victorgao0308
             </p>
             <p className="contact-info link" onClick={openGitHub}>https://github.com/victorgao0308</p>
           </div>
@@ -38,7 +38,7 @@ function openEmail() {
 }
 
 function openLinkedIn() {
-  window.open("https://www.linkedin.com/in/victorgao0308/", "_blank");
+  window.open("https://www.linkedin.com/in/victorgao0308", "_blank");
 }
 function openGitHub() {
   window.open("https://github.com/victorgao0308", "_blank");
