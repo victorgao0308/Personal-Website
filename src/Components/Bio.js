@@ -23,7 +23,7 @@ const Bio = () => {
               and data science.
               <br></br>
               <br></br>I have previously worked alongside professors at the
-              University of Kentucky to hone my skills in C and python, gaining
+              University of Kentucky to hone my skills in C and Python, gaining
               experience with the Ubuntu operating system, and various image
               processing and OCR python libraries, such as OpenCV and
               Pytesseract.
